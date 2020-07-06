@@ -1,0 +1,30 @@
+import smtplib as s
+ob=s.SMTP("smtp.gmail.com",587)
+
+
+ob.starttls()
+
+
+ob.login("akarshraj65a@gmail.com","Akarsh@123")
+
+subject="This is practise"
+
+body="This is tutorial"
+
+message="subject:{}\n\n{}".format(subject,body)
+listofaddress=["akarshraj65a@gmail.com","mail.akarshnew@gmail.com"]
+
+ob.sendmail("akarshraj65a@gmail.com",listofaddress,message)
+
+ob.quit()
+
+
+
+
+
+
+
+
+
+
+
